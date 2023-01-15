@@ -38,3 +38,11 @@ void pop(int stack[])
 		cout << "deleted  " << deletedItem << endl;
 	}
 }
+
+void display(int stack[])
+{
+	for (int i = top - 1; i >= 0; i--)
+	{
+		cout << stack[i];
+	}
+}
