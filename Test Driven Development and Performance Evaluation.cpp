@@ -16,6 +16,24 @@ int main()
 	cout << "3 = pop" << endl;
 	cout << "4 = exit" << endl;
 	cin >> choice;
+
+	switch (choice)
+	{
+	case 1: 
+		display(stack);
+		break;
+	case 2:
+		cout << "Enter item to push" << endl;
+		cin >> item;
+		push(stack, item);
+		break;
+	case 3:
+		pop(stack);
+		break;
+	case 4:
+		exit(4);
+		break;
+	}
 }
 
 void push(int stack[], int item)
