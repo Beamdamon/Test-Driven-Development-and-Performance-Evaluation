@@ -67,8 +67,9 @@ void pop(int stack[])
 
 void display(int stack[])
 {
+	cout << "the stack is:  " << endl;
 	for (int i = top; i >= 0; i--)
 	{
-		cout << stack[i];
+		cout <<  stack[i] << endl;
 	}
 }
