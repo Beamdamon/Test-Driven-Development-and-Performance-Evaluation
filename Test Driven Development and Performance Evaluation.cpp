@@ -23,3 +23,18 @@ void push(int stack[], int item)
 	top++;
 	stack[top] = item;
 }
+
+void pop(int stack[])
+{
+	int deletedItem;
+	if (top == -1)
+	{
+		cout << "There is nothing in the stack" << endl;
+	}
+	else
+	{
+		deletedItem = stack[top];
+		top--;
+		cout << "deleted  " << deletedItem << endl;
+	}
+}
