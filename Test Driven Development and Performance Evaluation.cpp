@@ -10,7 +10,8 @@ int main()
 {
 	bool exit = false;
 	int choice, item = 0;
-	
+	pop(stack);
+
 	while (!exit)
 	{
 		cout << "Stack Menu" << endl;
