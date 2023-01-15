@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int stack[10], top;
+int stack[1000], top;
 void push(int[], int);
 void pop(int[]);
 void display(int[]);
@@ -11,6 +11,7 @@ int main()
 	bool exit = false;
 	int choice, item = 0;
 	pop(stack);
+	cout << "The stack is empty" << endl;
 
 	while (!exit)
 	{
