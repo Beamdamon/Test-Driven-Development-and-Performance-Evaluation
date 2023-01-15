@@ -17,7 +17,6 @@ int main()
 		cout << "1 = display" << endl;
 		cout << "2 = push" << endl;
 		cout << "3 = pop" << endl;
-		cout << "4 = exit" << endl;
 		cin >> choice;
 
 		switch (choice)
@@ -33,11 +32,6 @@ int main()
 		case 3:
 			pop(stack);
 			break;
-		case 4:
-		{
-			bool exit = true;
-			break;
-		}
 		default: 
 			cout << "Invalid input" << endl;
 		}
