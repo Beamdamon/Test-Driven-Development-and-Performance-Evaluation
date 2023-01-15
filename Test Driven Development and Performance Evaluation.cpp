@@ -17,3 +17,9 @@ int main()
 	cout << "4 = exit" << endl;
 	cin >> choice;
 }
+
+void push(int stack[], int item)
+{
+	top++;
+	stack[top] = item;
+}
