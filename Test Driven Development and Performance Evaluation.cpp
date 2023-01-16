@@ -1,5 +1,7 @@
 #include <iostream>
+#include <chrono>
 using namespace std;
+using namespace std::chrono;
 
 int stack[1000], top;
 void push(int[], int);
@@ -42,12 +44,20 @@ int main()
 
 void push(int stack[], int item)
 { 
+	auto start = high_resolution_clock::now();
+	
 	top++;
 	stack[top] = item;
+
+	auto stop = high_resolution_clock::now();
+	auto duration = duration_cast<microseconds>(stop - start);
+
+	cout << duration.count() << " Microseconds taken" << endl;
 }
 
 void pop(int stack[])
 {
+	auto start = high_resolution_clock::now();
 	int deletedItem;
 	if (top == -1)
 	{
@@ -59,13 +69,23 @@ void pop(int stack[])
 		top--;
 		cout << "deleted  " << deletedItem << endl;
 	}
+	
+	auto stop = high_resolution_clock::now();
+	auto duration = duration_cast<microseconds>(stop - start);
+
+	cout << duration.count() << " Microseconds taken" << endl;
 }
 
 void display(int stack[])
 {
+	auto start = high_resolution_clock::now();
 	cout << "the stack is:  " << endl;
 	for (int i = top; i >= 0; i--)
 	{
 		cout <<  stack[i] << endl;
 	}
+	auto stop = high_resolution_clock::now();
+	auto duration = duration_cast<microseconds>(stop - start);
+
+	cout << duration.count() << " Microseconds taken" << endl;
 }
